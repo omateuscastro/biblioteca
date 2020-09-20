@@ -11,4 +11,14 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
+app.get("/livros", function(req, res) {
+  res.render("livros/livros");
+});
+
+app.get("/livros/novo", function(req, res) {
+  let mensagens = [];
+
+  res.render("livros/novo", { mensagens });
+});
+
 app.listen(3000);
