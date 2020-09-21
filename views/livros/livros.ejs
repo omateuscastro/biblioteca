@@ -4,7 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Biblioteca</title>
-	<link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
@@ -20,6 +22,7 @@
           <th>Autor</th>
           <th>Editora</th>
           <th>Ano</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
@@ -30,8 +33,10 @@
             <td><%=livro.autor%></td>
             <td><%=livro.editora%></td>
             <td><%=livro.ano%></td>
-            <td><a href="/livros/editar/<%=livro.id%>">editar</a></td>
-            <td><a href="/livros/excluir/<%=livro.id%>" onclick="return confirm('Confirma a exclusão?')">excluir</a></td>
+            <td><a href="/livros/editar/<%=livro.id%>" class="fas fa-edit" style="color: green"
+              ata-toggle="tooltip" title="Editar livro." ></a> <a href="/livros/excluir/<%=livro.id%>" class="fas fa-trash" style="color: red"
+                ata-toggle="tooltip" title="Excluir livro."
+                onclick="return confirm('Confirma a exclusão?')"></a></td>
           </tr>
           <% }); %>
       </tbody>

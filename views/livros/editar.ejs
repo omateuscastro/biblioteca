@@ -30,6 +30,7 @@
             <label for="ano">Ano</label>
             <input id="ano" type="number" name="ano" class="form-control" value="<%=livro.ano%>" placeholder="Informe o ano do livro." required>
           </div>
+          <input type="hidden" name="id" value="<%=livro.id%>">
           <input class="btn btn-primary" type="submit" value="Atualizar">
           <a href="/livros" class="btn btn-warning"> Lista de livros</a>
       </form>

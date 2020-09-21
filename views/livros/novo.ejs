@@ -35,12 +35,10 @@
       </form>
      </div> 
     </div>
-    <% if(mensagens.length > 0){ %>
-      <% mensagens.forEach(function(mensagem){ %>
+    <% if(mensagem){ %>
       <div class="alert alert-info">
         <strong>Novo Registro!</strong> <%= mensagem %>
       </div>
-      <% }); %>
       <% } %>
 	</div>
 
